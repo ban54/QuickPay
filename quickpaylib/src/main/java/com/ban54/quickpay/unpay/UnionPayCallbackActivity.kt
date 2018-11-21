@@ -1,4 +1,4 @@
-package com.ban54.paylib.unpay
+package com.ban54.quickpay.unpay
 
 import android.app.Activity
 import android.content.Intent

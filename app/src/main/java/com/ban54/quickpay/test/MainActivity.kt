@@ -1,13 +1,13 @@
-package com.ban54.paylib.test
+package com.ban54.quickpay.test
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import com.ban54.paylib.*
-import com.ban54.paylib.alipay.AlipayParameter
-import com.ban54.paylib.unpay.UnionPayParameter
-import com.ban54.paylib.wx.WXPayParameter
+import com.ban54.quickpay.*
+import com.ban54.quickpay.alipay.AlipayParameter
+import com.ban54.quickpay.unpay.UnionPayParameter
+import com.ban54.quickpay.wx.WXPayParameter
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val mPayResultCallback by lazy {

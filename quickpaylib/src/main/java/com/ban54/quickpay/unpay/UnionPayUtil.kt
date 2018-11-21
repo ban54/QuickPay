@@ -1,4 +1,4 @@
-package com.ban54.paylib.unpay
+package com.ban54.quickpay.unpay
 
 import android.app.Activity
 import android.content.BroadcastReceiver
@@ -7,7 +7,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.support.v4.content.LocalBroadcastManager
 import android.text.TextUtils
-import com.ban54.paylib.*
+import com.ban54.quickpay.*
 import com.unionpay.UPPayAssistEx
 
 /**

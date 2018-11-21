@@ -1,12 +1,12 @@
-package com.ban54.paylib.alipay
+package com.ban54.quickpay.alipay
 
 import android.app.Activity
 import android.text.TextUtils
 import com.alipay.sdk.app.PayTask
-import com.ban54.paylib.PayParameter
-import com.ban54.paylib.PayResult
-import com.ban54.paylib.PayResultCallback
-import com.ban54.paylib.PaymentUtil
+import com.ban54.quickpay.PayParameter
+import com.ban54.quickpay.PayResult
+import com.ban54.quickpay.PayResultCallback
+import com.ban54.quickpay.PaymentUtil
 
 /**
  * 支付宝支付工具

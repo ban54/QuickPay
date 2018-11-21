@@ -1,12 +1,12 @@
-package com.ban54.paylib
+package com.ban54.quickpay
 
 import android.app.Activity
-import com.ban54.paylib.alipay.AlipayParameter
-import com.ban54.paylib.alipay.AlipayUtil
-import com.ban54.paylib.unpay.UnionPayParameter
-import com.ban54.paylib.unpay.UnionPayUtil
-import com.ban54.paylib.wx.WXPayParameter
-import com.ban54.paylib.wx.WXPayUtil
+import com.ban54.quickpay.alipay.AlipayParameter
+import com.ban54.quickpay.alipay.AlipayUtil
+import com.ban54.quickpay.unpay.UnionPayParameter
+import com.ban54.quickpay.unpay.UnionPayUtil
+import com.ban54.quickpay.wx.WXPayParameter
+import com.ban54.quickpay.wx.WXPayUtil
 
 /**
  * 支付工具类

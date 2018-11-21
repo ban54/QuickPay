@@ -1,4 +1,4 @@
-package com.ban54.paylib.wx
+package com.ban54.quickpay.wx
 
 import android.app.Activity
 import android.content.Intent

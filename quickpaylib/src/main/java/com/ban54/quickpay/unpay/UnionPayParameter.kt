@@ -1,9 +1,9 @@
-package com.ban54.paylib.unpay
+package com.ban54.quickpay.unpay
 
 
 import android.os.Parcel
 import android.os.Parcelable
-import com.ban54.paylib.PayParameter
+import com.ban54.quickpay.PayParameter
 
 /**
  * 银联支付参数

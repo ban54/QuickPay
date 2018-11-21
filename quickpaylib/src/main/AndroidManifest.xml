@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.ban54.paylib">
+          package="com.ban54.quickpay">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
@@ -33,7 +33,7 @@
         <uses-library android:name="org.simalliance.openmobileapi" android:required="false"/>
 
         <activity
-                android:name=".unpay.UnionPayCallbackActivity"
+                android:name="com.ban54.quickpay.unpay.UnionPayCallbackActivity"
                 android:configChanges="orientation|keyboardHidden|keyboard"
                 android:theme="@android:style/Theme.Translucent.NoTitleBar"
                 android:screenOrientation="portrait"/>

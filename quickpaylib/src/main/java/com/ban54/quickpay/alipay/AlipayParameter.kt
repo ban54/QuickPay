@@ -1,7 +1,7 @@
-package com.ban54.paylib.alipay
+package com.ban54.quickpay.alipay
 
 
-import com.ban54.paylib.PayParameter
+import com.ban54.quickpay.PayParameter
 
 /**
  * 支付宝支付参数

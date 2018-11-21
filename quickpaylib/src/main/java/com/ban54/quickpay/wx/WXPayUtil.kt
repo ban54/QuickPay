@@ -1,4 +1,4 @@
-package com.ban54.paylib.wx
+package com.ban54.quickpay.wx
 
 import android.app.Activity
 import android.content.BroadcastReceiver
@@ -6,7 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.support.v4.content.LocalBroadcastManager
-import com.ban54.paylib.*
+import com.ban54.quickpay.*
 import com.tencent.mm.opensdk.constants.Build
 import com.tencent.mm.opensdk.modelbase.BaseResp
 import com.tencent.mm.opensdk.modelpay.PayReq

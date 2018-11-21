@@ -1,4 +1,4 @@
-package com.ban54.paylib
+package com.ban54.quickpay
 
 /**
  * 支付参数

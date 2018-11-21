@@ -1,6 +1,6 @@
-package com.ban54.paylib.wx
+package com.ban54.quickpay.wx
 
-import com.ban54.paylib.PayParameter
+import com.ban54.quickpay.PayParameter
 import com.tencent.mm.opensdk.modelpay.PayReq
 
 /**
