@@ -23,13 +23,13 @@ abstract class WXPayCallbackActivity : Activity(), IWXAPIEventHandler {
      *
      * @return
      */
-    protected abstract val wxAppId: String
+    protected abstract val mWXAppId: String
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(android.R.style.Theme_Translucent_NoTitleBar)
 
-        api = WXAPIFactory.createWXAPI(this, wxAppId)
+        api = WXAPIFactory.createWXAPI(this, mWXAppId)
         api?.handleIntent(intent, this)
     }
 
