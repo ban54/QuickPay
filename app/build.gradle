@@ -25,5 +25,6 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.github.ban54:QuickPay:0.0.1'
+    //api project(':quickpaylib')
+    api 'com.github.ban54:QuickPay:0.0.1'
 }

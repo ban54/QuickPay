@@ -72,7 +72,7 @@ class WXPayUtil(context: Activity, payParameter: PayParameter, payResultCallback
             if (!api.sendReq(req)) {
                 mPayResultCallback?.onFail(
                     mPayParameter, PayResult(
-                        PayResult.FAILED, "微信启动失败",
+                        PayResult.FAILED, "微信支付启动失败",
                         PayResult.INTERNAL_FAILED
                     )
                 )

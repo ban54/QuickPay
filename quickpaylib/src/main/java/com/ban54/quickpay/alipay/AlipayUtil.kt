@@ -7,6 +7,7 @@ import com.ban54.quickpay.PayParameter
 import com.ban54.quickpay.PayResult
 import com.ban54.quickpay.PayResultCallback
 import com.ban54.quickpay.PaymentUtil
+import java.lang.Error
 
 /**
  * 支付宝支付工具
@@ -16,10 +17,17 @@ class AlipayUtil(context: Activity, payParameter: PayParameter, payResultCallbac
 
     override fun pay() {
         Thread(Runnable {
-            val payTask = PayTask(mContext)
-            val parameter = mPayParameter as AlipayParameter
-            val result = payTask.pay(parameter.parameters, true)
-            val payResult = parsePayResult(result)
+            var payResult: PayResult
+            try {
+                val payTask = PayTask(mContext)
+                val parameter = mPayParameter as AlipayParameter
+                val result = payTask.pay(parameter.parameters, true)
+                payResult = parsePayResult(result)
+            } catch (e: Exception) {
+                payResult = PayResult(PayResult.FAILED, e.localizedMessage, PayResult.SDK_FAILED)
+            } catch (e1: Error) {
+                payResult = PayResult(PayResult.FAILED, e1.localizedMessage, PayResult.SDK_FAILED)
+            }
             mPayResultCallback?.apply {
                 mContext.runOnUiThread {
                     when (payResult.code) {
