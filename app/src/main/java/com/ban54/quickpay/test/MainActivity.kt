@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             override fun onFail(payParameter: PayParameter, payResult: PayResult) {
-                resultView.text = "支付失败"
+                resultView.text = "支付失败: " + payResult.description
                 clearResult()
             }
 
