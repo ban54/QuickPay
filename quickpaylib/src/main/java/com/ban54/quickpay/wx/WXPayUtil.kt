@@ -11,6 +11,10 @@ import com.tencent.mm.opensdk.constants.Build
 import com.tencent.mm.opensdk.modelbase.BaseResp
 import com.tencent.mm.opensdk.modelpay.PayReq
 import com.tencent.mm.opensdk.openapi.WXAPIFactory
+import android.provider.UserDictionary.Words.APP_ID
+import com.tencent.mm.opensdk.openapi.IWXAPI
+
+
 
 /**
  * 微信支付工具
@@ -52,6 +56,8 @@ class WXPayUtil(context: Activity, payParameter: PayParameter, payResultCallback
         val parameter = mPayParameter as WXPayParameter
         parameter.extData = WX_PAY_START_STRING
         val api = WXAPIFactory.createWXAPI(mContext, parameter.appId)
+		// 将该app注册到微信
+        api.registerApp(parameter.appId);
         if (!api.isWXAppInstalled) { // 微信未安装
             mPayResultCallback?.onFail(
                 mPayParameter,
@@ -84,20 +90,20 @@ class WXPayUtil(context: Activity, payParameter: PayParameter, payResultCallback
         /**
          * 微信支付回调结果广播ACTION
          */
-        val ACTION_WX_PAY_RETURN = BuildConfig.APPLICATION_ID + ".ACTION_WX_PAY_RETURN"
+        const val ACTION_WX_PAY_RETURN = BuildConfig.APPLICATION_ID + ".ACTION_WX_PAY_RETURN"
         /**
          * 微信支付结果码
          */
-        val EXTRA_RESULT_CODE = "EXTRA_RESULT_CODE"
+        const val EXTRA_RESULT_CODE = "EXTRA_RESULT_CODE"
         /**
          * 微信支付结果描述信息
          */
-        val EXTRA_RESULT_DESC = "EXTRA_RESULT_DESC"
+        const val EXTRA_RESULT_DESC = "EXTRA_RESULT_DESC"
         /**
          * 等待支付结果超时时间（毫秒）
          */
-        val TIMEOUT = 10000
+        const val TIMEOUT = 10000
 
-        val WX_PAY_START_STRING = "wx_pay_start_string"
+        const val WX_PAY_START_STRING = "wx_pay_start_string"
     }
 }

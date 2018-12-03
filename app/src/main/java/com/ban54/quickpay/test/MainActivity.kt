@@ -61,8 +61,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun wechatPay() {
         val payParameter = WXPayParameter()
-        payParameter.appId = BuildConfig.APPLICATION_ID
-        payParameter.sign = "adsfasdfqerqeasdfadsfasdfadfafadfasfr"
+        payParameter.appId = "1111111111"
+        payParameter.sign = "1E624954B31F67325E4B04D35C723231"
+        payParameter.partnerId = "3425222375101"
+        payParameter.prepayId = "wx03110180330e234276c3c0454792366"
+        payParameter.packageValue = "Sign=WXPay"
+        payParameter.nonceStr = "xp7ayusbjp8jwb1e4gxq3xsnwe346la8"
+        payParameter.timeStamp = "1543615347"
         PayHelper.pay(this, payParameter, mPayResultCallback)
     }
 
