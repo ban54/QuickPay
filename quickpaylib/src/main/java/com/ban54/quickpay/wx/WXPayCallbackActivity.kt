@@ -42,7 +42,7 @@ abstract class WXPayCallbackActivity : Activity(), IWXAPIEventHandler {
     override fun onReq(req: BaseReq) {}
 
     override fun onResp(resp: BaseResp) {
-        if (resp.getType() === ConstantsAPI.COMMAND_PAY_BY_WX) {
+        if (resp.type === ConstantsAPI.COMMAND_PAY_BY_WX) {
             val payResp = resp as PayResp
             val extData = payResp.extData
             if (!extData.startsWith(WXPayUtil.WX_PAY_START_STRING)) {

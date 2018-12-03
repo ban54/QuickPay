@@ -18,12 +18,12 @@ class PayResult {
      */
     var subCode = 0//默认值
 
-    constructor(code: Int, description: String) {
+    constructor(code: Int, description: String?) {
         this.code = code
         this.description = description
     }
 
-    constructor(code: Int, description: String, subCode: Int) {
+    constructor(code: Int, description: String?, subCode: Int) {
         this.code = code
         this.description = description
         this.subCode = subCode
