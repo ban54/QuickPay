@@ -25,14 +25,14 @@ class WXPayParameter : PayParameter() {
 
     fun fillWXPayReq(payReq: PayReq?) {
         payReq?.apply {
-            appId = appId
-            partnerId = partnerId
-            prepayId = prepayId
-            nonceStr = nonceStr
-            timeStamp = timeStamp
-            packageValue = packageValue
-            sign = sign
-            extData = extData
+            appId = this@WXPayParameter.appId
+            partnerId = this@WXPayParameter.partnerId
+            prepayId = this@WXPayParameter.prepayId
+            nonceStr = this@WXPayParameter.nonceStr
+            timeStamp = this@WXPayParameter.timeStamp
+            packageValue = this@WXPayParameter.packageValue
+            sign = this@WXPayParameter.sign
+            extData = this@WXPayParameter.extData
         }
     }
 

@@ -16,12 +16,13 @@ class UnionPayCallbackActivity : Activity() {
     private val mHandler = object : Handler() {
         override fun handleMessage(msg: Message) {
             when (msg.what) {
-                MSG_FINISH_SELF -> finish()
+                MSG_FINISH_SELF -> if (mIsResume) finish()
             }
         }
     }
     // 是否已发送支付结果
     private var mSentPayResult = false
+    private var mIsResume = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +50,13 @@ class UnionPayCallbackActivity : Activity() {
 
     override fun onResume() {
         super.onResume()
-        mHandler.sendEmptyMessageDelayed(MSG_FINISH_SELF, 500)
+        mIsResume = true
+        mHandler.sendEmptyMessageDelayed(MSG_FINISH_SELF, 1000)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mIsResume = false
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
