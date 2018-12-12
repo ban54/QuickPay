@@ -11,7 +11,7 @@
 >     }
 2. 在project的build.gralde中增加依赖
 >     dependencies {
->         implementation 'com.github.ban54:QuickPay:v0.0.4'
+>         implementation 'com.github.ban54:QuickPay:v0.0.5'
 >     }
 3. 微信支付对接
 * 在项目根package下建立的wxapi的子package, 并在这个package下新建一个类名为WXPayEntryActivity的类，继承自com.ban54.quickpay.wx.WXPayCallbackActivity，同时实现wxAppId的get()方法，返回接入app中微信开放平台注册的app id
